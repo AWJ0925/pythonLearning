@@ -211,7 +211,8 @@ print(offices)
 # 3.验证
 i = 1
 for of in offices:  # 为了知道每个办公室的老师都是谁，要对办公室进行遍历
-    print(f'办公室{i}的人数是{len(of)}，老师分别是：')
+    print(f'办公室{i}的人数是{len(of)}，老师分别是：', end='  ')
     for na in of:   # 每个办公室人员的遍历
-        print(na)
+        print(na, end='    ')
+    print()
     i += 1
