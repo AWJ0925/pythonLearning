@@ -193,26 +193,25 @@ print(nameList3D[0][0][0])  # 1
 
 # 六，应用--随机分配办公室
 '''
-1.准备数据：1、老师的数据，也就是老师的名字 ；2、3个办公室——列表嵌套；[[01],[02],[03]]
+1.准备数据：老师的名字、3个办公室——列表嵌套；[[01],[02],[03]]
 2.分配老师到办公室：随机分配，就是把老师的名字写入（列表数据的增加）到办公室的列表——办公室的列表追加老师的名字
 3.验证是否分配成功：打印办公室的详细信息：打印办公室的人数和对应的老师的名字
 '''
-
 import random as rd  # 导入随机模块并重命名
 # 1.准备数据
-teachers = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']  # 老师的列表
-offices = [[], [], []]  # 列表的嵌套
+teacherNames = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']  # 老师
+offices = [[], [], []]
 
 # 2.分配老师到办公室：随机分配——遍历老师列表数据
-for name in teachers:
-    num = rd.randint(0, 2)
-    offices[num].append(name)   # 把老师的名字增加至某个办公室
+for na in teacherNames:
+    id_of = rd.randint(0, 2)
+    offices[id_of].append(na)   # 把老师的名字增加至某个办公室
 print(offices)
 
 # 3.验证
 i = 1
-for office in offices:  # 为了知道每个办公室的老师都是谁，要对办公室进行遍历
-    print(f'办公室{i}的人数是{len(office)}，老师分别是：')
-    for name in office:   # 每个办公室人员的遍历
-        print(name)
+for of in offices:  # 为了知道每个办公室的老师都是谁，要对办公室进行遍历
+    print(f'办公室{i}的人数是{len(of)}，老师分别是：')
+    for na in of:   # 每个办公室人员的遍历
+        print(na)
     i += 1
